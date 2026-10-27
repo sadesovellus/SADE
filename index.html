@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eaf5fb">
+  <title>SADE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section id="home" class="screen active" aria-labelledby="home-title">
+      <header class="hero">
+        <div class="rain" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="brand"><h1 id="home-title">SADE</h1></div>
+        <button class="profile-button" data-screen="profile" aria-label="Avaa profiili"><span>V</span><small>Ville</small></button>
+        <div class="waves" aria-hidden="true"><span></span><span></span><span></span></div>
+      </header>
+
+      <section class="quick-actions" aria-label="Pikatoiminnot">
+        <button id="sound-toggle" class="start-card" aria-label="Aloita ääni"><span class="round-icon" id="sound-icon">▶</span><span><strong id="sound-label">Aloita</strong></span></button>
+        <button class="rhythm-card" data-screen="rhythm"><span class="calendar-icon">▦</span><span><strong>Viikkorytmi</strong><small>Kirjaa tulevan viikon tapahtumat</small></span><b>›</b></button>
+      </section>
+
+      <section class="card summary-card" aria-labelledby="week-heading">
+        <div class="section-head"><div><p class="eyebrow">TÄMÄ VIIKKO</p><h2 id="week-heading">Ahdistusta herättäneet tilanteet</h2></div><button class="text-button" data-screen="stats">Tilastot ›</button></div>
+        <div class="event-line-chart" aria-label="Kirjattuja ahdistustilanteita viikonpäivittäin: maanantai 1, tiistai 2, keskiviikko 3, torstai 1, perjantai 1, lauantai 0, sunnuntai 0">
+          <svg viewBox="0 0 320 135" role="img" aria-hidden="true"><path d="M8 83 L59 58 L110 25 L161 83 L212 83 L263 122 L312 122" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><g fill="currentColor"><circle cx="8" cy="83" r="4"/><circle cx="59" cy="58" r="4"/><circle cx="110" cy="25" r="4"/><circle cx="161" cy="83" r="4"/><circle cx="212" cy="83" r="4"/><circle cx="263" cy="122" r="4"/><circle cx="312" cy="122" r="4"/></g></svg>
+          <div><b>ma</b><b>ti</b><b>ke</b><b>to</b><b>pe</b><b>la</b><b>su</b></div>
+        </div>
+        <ul class="event-list"><li><span class="event-dot high"></span><p><strong>Keskiviikko · koepalautus</strong><small>Ahdistus voimakasta · ääni avattu</small></p></li><li><span class="event-dot medium"></span><p><strong>Tiistai · ryhmätilanne</strong><small>Ahdistus kohtalaista · ääni avattu</small></p></li><li><span class="event-dot medium"></span><p><strong>Maanantai · koulupäivä</strong><small>Ahdistus kohtalaista</small></p></li></ul>
+      </section>
+
+      <section class="card sound-list" aria-labelledby="sounds-heading">
+        <div class="section-head"><div><p class="eyebrow">ÄÄNET</p><h2 id="sounds-heading"></h2></div><button class="text-button" data-screen="sound-settings">Muokkaa ›</button></div>
+        <div id="selected-sounds" class="selected-sounds"></div>
+      </section>
+      <button class="notice" id="load-notice"><span>◌</span><span><strong>Huomaa oma kuormituksesi</strong><small>Lisää päivän tuntemus tähän</small></span><b>›</b></button>
+    </section>
+
+    <section id="profile" class="screen" aria-labelledby="profile-title"><button class="back" data-screen="home">‹ Takaisin</button><div class="profile-hero"><div class="avatar">V</div><p class="eyebrow">OMA PROFIIlI</p><h1 id="profile-title">Ville</h1><p>Omat tiedot ja havainnot.</p></div><section class="card stat-grid"><div><strong>8</strong><span>kirjattua tilannetta</span></div><div><strong>5</strong><span>äänen avausta</span></div><div><strong>3</strong><span>erilaista tilannetta</span></div></section><section class="card"><p class="eyebrow">TÄMÄ VIIKKO</p><h2>Koulupäivät korostuvat havainnoissa</h2><p class="muted">Tarkastele tilanteita ja niiden yhteyksiä pidemmällä aikavälillä tilastoista.</p></section><button class="wide-action" data-screen="stats">Katso tarkemmat tilastot <b>›</b></button></section>
+
+    <section id="stats" class="screen" aria-labelledby="stats-title"><button class="back" data-screen="home">‹ Takaisin</button><p class="eyebrow">TILASTOT</p><h1 id="stats-title">Tilanteiden yhteenveto</h1><section class="card"><h2>Missä tilanteissa ahdistusta ilmenee?</h2><ul class="observations"><li><span>▦</span><p><strong>Koulupäivissä eniten havaintoja</strong><br>5 / 8 kirjauksesta liittyy koulupäivään</p></li><li><span>◉</span><p><strong>Ryhmätilanteet korostuvat</strong><br>3 kirjausta viimeisten neljän viikon aikana</p></li><li><span>✎</span><p><strong>Kokeet ja palautukset</strong><br>2 kirjausta, joista molemmissa ääni avattu</p></li><li><span>⌁</span><p><strong>Kotimatka</strong><br>1 kirjaus, ahdistus oli lievää</p></li></ul></section></section>
+
+    <section id="rhythm" class="screen" aria-labelledby="rhythm-title"><button class="back" data-screen="home">‹ Takaisin</button><p class="eyebrow">VIIKKORYTMI</p><h1 id="rhythm-title">Tuleva viikko</h1><p class="intro">Kirjaa tulevan viikon tapahtumat. Napauta palkkia muokataksesi sitä.</p><section class="card timetable-card"><div class="timetable-scroll"><div class="timetable" id="timetable" aria-label="Viikkorytmin lukujärjestys"></div></div><div class="timetable-legend"><span><i class="school"></i>Koulu</span><span><i class="hobby"></i>Harrastus</span><span><i class="social"></i>Sosiaalinen</span><span><i class="study"></i>Koulutyö</span><span><i class="other"></i>Muu</span></div></section><button id="new-event" class="wide-action">＋ Lisää uusi tapahtuma</button></section>
+
+    <section id="sound-settings" class="screen" aria-labelledby="sound-settings-title"><button class="back" data-screen="home">‹ Takaisin</button><p class="eyebrow">ÄÄNILISTA</p><h1 id="sound-settings-title">Valitse äänet</h1><p class="intro">Valitut äänet ovat käytettävissä, kun äänen soitto aloitetaan.</p><section class="card sound-picker" id="sound-picker"></section><label class="own-sound card"><span>＋</span><input id="audio-file" type="file" accept="audio/*"><strong>Lisää oma ääni</strong><small id="file-name">Valitse äänitiedosto</small></label><button id="save-sounds" class="wide-action">Tallenna äänilista</button></section>
+  </main>
+
+  <dialog id="event-dialog"><form method="dialog"><button class="close" value="cancel" aria-label="Sulje">×</button><p class="eyebrow" id="event-dialog-label">UUSI TAPAHTUMA</p><h2 id="event-dialog-title">Lisää tapahtuma viikkorytmiin</h2><label>Tapahtuma<input id="event-name" type="text" value="Koulupäivä"></label><label>Päivä<select id="event-day"><option>Maanantai</option><option>Tiistai</option><option>Keskiviikko</option><option>Torstai</option><option>Perjantai</option><option>Lauantai</option><option>Sunnuntai</option></select></label><div class="time-row"><label>Alkaa<input id="event-time" type="time" value="08:15"></label><label>Päättyy<input id="event-end-time" type="time" value="15:45"></label></div><label>Kategoria<select id="event-category"><option value="school">Koulu</option><option value="hobby">Harrastus</option><option value="social">Sosiaalinen</option><option value="study">Koulutyö</option><option value="other">Muu</option></select></label><label id="custom-color-row">Oma väri<input id="event-color" type="color" value="#dfe7f8"></label><button id="save-event" value="default" class="wide-action">Tallenna tapahtuma</button></form></dialog>
+  <dialog id="load-dialog"><form method="dialog"><button class="close" value="cancel" aria-label="Sulje">×</button><p class="eyebrow">TÄMÄN PÄIVÄN TUNNISTELU</p><h2>Miltä sinusta tuntuu juuri nyt?</h2><div class="mood-options"><button value="Kevyt">Kevyt</button><button value="Tasainen">Tasainen</button><button value="Kuormittunut">Kuormittunut</button></div><p class="muted" id="mood-result"></p></form></dialog>
+  <div id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
