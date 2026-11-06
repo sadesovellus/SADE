@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fi">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,6 +13,7 @@
       <header class="hero">
         <div class="rain" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
         <div class="brand"><h1 id="home-title">SADE</h1></div>
+        <div class="language-switch" aria-label="Language selection"><button type="button" data-language="fi">FI</button><span>|</span><button type="button" data-language="en" class="active" aria-pressed="true">EN</button></div>
         <button class="profile-button" data-screen="profile" aria-label="Avaa profiili"><span>V</span><small>Ville</small></button>
         <div class="waves" aria-hidden="true"><span></span><span></span><span></span></div>
       </header>
@@ -47,7 +48,7 @@
     <section id="sound-settings" class="screen" aria-labelledby="sound-settings-title"><button class="back" data-screen="home">‹ Takaisin</button><p class="eyebrow">ÄÄNILISTA</p><h1 id="sound-settings-title">Valitse äänet</h1><p class="intro">Valitut äänet ovat käytettävissä, kun äänen soitto aloitetaan.</p><section class="card sound-picker" id="sound-picker"></section><label class="own-sound card"><span>＋</span><input id="audio-file" type="file" accept="audio/*"><strong>Lisää oma ääni</strong><small id="file-name">Valitse äänitiedosto</small></label><button id="save-sounds" class="wide-action">Tallenna äänilista</button></section>
   </main>
 
-  <dialog id="event-dialog"><form method="dialog"><button class="close" value="cancel" aria-label="Sulje">×</button><p class="eyebrow" id="event-dialog-label">UUSI TAPAHTUMA</p><h2 id="event-dialog-title">Lisää tapahtuma viikkorytmiin</h2><label>Tapahtuma<input id="event-name" type="text" value="Koulupäivä"></label><label>Päivä<select id="event-day"><option>Maanantai</option><option>Tiistai</option><option>Keskiviikko</option><option>Torstai</option><option>Perjantai</option><option>Lauantai</option><option>Sunnuntai</option></select></label><div class="time-row"><label>Alkaa<input id="event-time" type="time" value="08:15"></label><label>Päättyy<input id="event-end-time" type="time" value="15:45"></label></div><label>Kategoria<select id="event-category"><option value="school">Koulu</option><option value="hobby">Harrastus</option><option value="social">Sosiaalinen</option><option value="study">Koulutyö</option><option value="other">Muu</option></select></label><label id="custom-color-row">Oma väri<input id="event-color" type="color" value="#dfe7f8"></label><button id="save-event" value="default" class="wide-action">Tallenna tapahtuma</button></form></dialog>
+  <dialog id="event-dialog"><form method="dialog"><button class="close" value="cancel" aria-label="Close">×</button><p class="eyebrow" id="event-dialog-label">NEW EVENT</p><h2 id="event-dialog-title">Add an event to your weekly schedule</h2><label id="event-name-label">Event<input id="event-name" type="text" value="School day"></label><label id="event-day-label">Day<select id="event-day"><option value="Monday">Monday</option><option value="Tuesday">Tuesday</option><option value="Wednesday">Wednesday</option><option value="Thursday">Thursday</option><option value="Friday">Friday</option><option value="Saturday">Saturday</option><option value="Sunday">Sunday</option></select></label><div class="time-row"><label id="event-start-label">Starts<input id="event-time" type="time" value="08:15"></label><label id="event-end-label">Ends<input id="event-end-time" type="time" value="15:45"></label></div><label id="event-category-label">Category<select id="event-category"><option value="school">School</option><option value="hobby">Hobby</option><option value="social">Social</option><option value="study">Schoolwork</option><option value="other">Other</option></select></label><label id="custom-color-row">Custom colour<input id="event-color" type="color" value="#dfe7f8"></label><button id="save-event" value="default" class="wide-action">Save event</button></form></dialog>
   <dialog id="load-dialog"><form method="dialog"><button class="close" value="cancel" aria-label="Sulje">×</button><p class="eyebrow">TÄMÄN PÄIVÄN TUNNISTELU</p><h2>Miltä sinusta tuntuu juuri nyt?</h2><div class="mood-options"><button value="Kevyt">Kevyt</button><button value="Tasainen">Tasainen</button><button value="Kuormittunut">Kuormittunut</button></div><p class="muted" id="mood-result"></p></form></dialog>
   <div id="toast" role="status"></div>
   <script src="app.js"></script>
